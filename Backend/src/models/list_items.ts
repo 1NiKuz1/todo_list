@@ -1,13 +1,13 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 
-class List extends Model {
+class ListItems extends Model {
   declare item_id: number;
   declare header: string;
   declare body: string;
 }
 
 export const ListItemsModel = (sequelize: Sequelize) => {
-  List.init(
+  ListItems.init(
     {
       item_id: {
         type: DataTypes.INTEGER,
@@ -31,5 +31,5 @@ export const ListItemsModel = (sequelize: Sequelize) => {
     }
   );
 
-  return List;
+  return ListItems;
 };

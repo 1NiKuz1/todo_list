@@ -32,9 +32,7 @@ class ListItemsController implements IListItemsController {
     next: NextFunction
   ): Promise<Response> {
     try {
-      const list_item = await ListItems.findOne({
-        where: { item_id: req.params.id },
-      });
+      const list_item = await ListItems.findByPk(req.params.id);
       return res.json(list_item);
     } catch (error: any) {
       return res

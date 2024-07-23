@@ -12,7 +12,7 @@
         v-model.trim="body"
         name="body"
         maxlength="5000"
-        placeholder="Описание"
+        placeholder="Описание..."
       ></textarea>
       <div class="list-item__buttons-wrapper">
         <VueButton type="button" @click="$router.push('/')">Назад</VueButton>
